@@ -6,11 +6,11 @@ class res_partner(osv.osv):
     _inherit = 'res.partner'
 
     _sql_constraints = [
-        # Partial constraint, complemented by unique index (see below)
+        # Empty constraint, complemented by unique index (see below)
         # Still useful to keep sql constraints because it provides a proper error message when a violation occurs.
         # Because the constraint and index share the same prefix so that IntegrityError triggered by the index will be caught
         # and reported to the user with the sql constraint's error message.
-        ('name_is_company_unique', 'unique (name, is_company)', 'Company names must be unique'),
+        ('name_is_company_unique', 'unique ()', 'Company names must be unique'),
     ]
 
     def init(self, cr, context=None):
