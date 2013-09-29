@@ -11,4 +11,5 @@ Uninstall from the OpenERP interface is not enough.
 You have drop constraint and index manually.
 
 ALTER TABLE res_partner DROP CONSTRAINT res_partner_name_is_company_unique;
+
 DROP INDEX res_partner_name_is_company_unique_idx;
